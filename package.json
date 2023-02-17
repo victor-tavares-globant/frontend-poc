@@ -20,7 +20,8 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "eject": "craco eject"
+    "eject": "craco eject",
+    "lint": "eslint --ext js,jsx,ts,tsx src --max-warnings 0"
   },
   "eslintConfig": {
     "extends": [
@@ -42,6 +43,10 @@
   },
   "devDependencies": {
     "@craco/craco": "^7.0.0",
-    "@craco/types": "^7.0.0"
+    "@craco/types": "^7.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.52.0",
+    "@typescript-eslint/parser": "^5.52.0",
+    "eslint": "^8.34.0",
+    "eslint-plugin-react": "^7.32.2"
   }
 }
