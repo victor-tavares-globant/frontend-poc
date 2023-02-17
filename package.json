@@ -22,7 +22,8 @@
     "test": "craco test",
     "eject": "craco eject",
     "lint": "eslint --ext js,jsx,ts,tsx src --max-warnings 0",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "format:fix": "prettier --write ."
   },
   "eslintConfig": {
     "extends": [
