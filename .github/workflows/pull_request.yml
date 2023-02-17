@@ -1,0 +1,123 @@
+name: Pull Request
+on:
+  workflow_dispatch:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  push:
+    branches:
+      - main
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+jobs:
+  format:
+    name: Check Format and Linter
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Cache modules
+        uses: actions/cache@v3
+        id: yarn-cache-modules
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Setup Node Version
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+
+      - shell: bash
+        name: Install dependencies
+        if: steps.yarn-cache-modules.outputs.cache-hit != 'true'
+        run: yarn install --frozen-lockfile
+
+      - name: ESlint
+        run: yarn lint
+
+      - name: Linter Style
+        run: yarn lint:css
+
+      - name: Prettier
+        run: yarn format:check
+
+  tests:
+    needs: [format]
+    name: Run Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Cache modules
+        uses: actions/cache@v3
+        id: yarn-cache-modules
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Setup Node Version
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+
+      - shell: bash
+        name: Install dependencies
+        if: steps.yarn-cache-modules.outputs.cache-hit != 'true'
+        run: yarn install --frozen-lockfile
+
+      - name: Test
+        run: yarn jest --passWithNoTests # This SHOULD have to be removed once tests are implemented
+
+  typescript:
+    needs: [tests]
+    name: Check typescript compiles
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Cache modules
+        uses: actions/cache@v3
+        id: yarn-cache-modules
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Setup Node Version
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+
+      - shell: bash
+        name: Install dependencies
+        if: steps.yarn-cache-modules.outputs.cache-hit != 'true'
+        run: yarn install --frozen-lockfile
+
+      - name: Typescript Compile
+        run: yarn tsc
+
+  build:
+    name: Build the project
+    needs: [typescript]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Cache modules
+        uses: actions/cache@v3
+        id: yarn-cache-modules
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Setup Node Version
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+
+      - shell: bash
+        name: Install dependencies
+        if: steps.yarn-cache-modules.outputs.cache-hit != 'true'
+        run: yarn install --frozen-lockfile
+
+      - name: Build
+        run: yarn build
