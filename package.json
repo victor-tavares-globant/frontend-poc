@@ -22,6 +22,7 @@
     "test": "craco test",
     "eject": "craco eject",
     "lint": "eslint --ext js,jsx,ts,tsx src --max-warnings 0",
+    "lint:css": "stylelint 'src/**/*.css'",
     "format:check": "prettier --check .",
     "format:fix": "prettier --write ."
   },
@@ -52,6 +53,10 @@
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
-    "prettier": "^2.8.4"
+    "prettier": "^2.8.4",
+    "stylelint": "^15.1.0",
+    "stylelint-config-css-modules": "^4.2.0",
+    "stylelint-config-prettier": "^9.0.5",
+    "stylelint-config-standard": "^30.0.1"
   }
 }
