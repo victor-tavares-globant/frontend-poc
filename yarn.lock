@@ -24,6 +24,14 @@
     jsonpointer "^5.0.0"
     leven "^3.1.0"
 
+"@axe-core/react@^4.6.0":
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/@axe-core/react/-/react-4.6.0.tgz#c65b9736121f484b2bd373247cc68c95e056646f"
+  integrity sha512-ywWaIQ3cUXywTtZXtRb3YI2wTxg2DEa2cA6GW/HJreVf2qjyKq2Kt92F+vJ17IrDBcSym/vMQ0C4ixEyNysIDw==
+  dependencies:
+    axe-core "^4.6.1"
+    requestidlecallback "^0.3.0"
+
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.10.4", "@babel/code-frame@^7.12.13", "@babel/code-frame@^7.16.0", "@babel/code-frame@^7.18.6", "@babel/code-frame@^7.8.3":
   version "7.18.6"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.18.6.tgz#3b25d38c89600baa2dcc219edfa88a74eb2c427a"
@@ -2761,7 +2769,7 @@ available-typed-arrays@^1.0.5:
   resolved "https://registry.yarnpkg.com/available-typed-arrays/-/available-typed-arrays-1.0.5.tgz#92f95616501069d07d10edb2fc37d3e1c65123b7"
   integrity sha512-DMD0KiN46eipeziST1LPP/STfDU0sufISXmjSgvVsoU2tqxctQeASejWcfNtxYKqETM1UxQ8sp2OrSBWpHY6sw==
 
-axe-core@^4.6.2:
+axe-core@^4.6.1, axe-core@^4.6.2:
   version "4.6.3"
   resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-4.6.3.tgz#fc0db6fdb65cc7a80ccf85286d91d64ababa3ece"
   integrity sha512-/BQzOX780JhsxDnPpH4ZiyrJAzcd8AfzFPkv+89veFSr1rcMjuq2JDCwypKaPeB6ljHp9KjXhPpjgCvQlWYuqg==
@@ -4238,7 +4246,7 @@ eslint-plugin-jest@^25.3.0:
   dependencies:
     "@typescript-eslint/experimental-utils" "^5.0.0"
 
-eslint-plugin-jsx-a11y@^6.5.1:
+eslint-plugin-jsx-a11y@^6.5.1, eslint-plugin-jsx-a11y@^6.7.1:
   version "6.7.1"
   resolved "https://registry.yarnpkg.com/eslint-plugin-jsx-a11y/-/eslint-plugin-jsx-a11y-6.7.1.tgz#fca5e02d115f48c9a597a6894d5bcec2f7a76976"
   integrity sha512-63Bog4iIethyo8smBklORknVjB0T2dwB8Mr/hIC+fBS0uyHdYYpzM/Ed+YC8VxTjlXHEWFOdmgwcDn1U2L9VCA==
@@ -8083,6 +8091,11 @@ renderkid@^3.0.0:
     htmlparser2 "^6.1.0"
     lodash "^4.17.21"
     strip-ansi "^6.0.1"
+
+requestidlecallback@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/requestidlecallback/-/requestidlecallback-0.3.0.tgz#6fb74e0733f90df3faa4838f9f6a2a5f9b742ac5"
+  integrity sha512-TWHFkT7S9p7IxLC5A1hYmAYQx2Eb9w1skrXmQ+dS1URyvR8tenMLl4lHbqEOUnpEYxNKpkVMXUgknVpBZWXXfQ==
 
 require-directory@^2.1.1:
   version "2.1.1"

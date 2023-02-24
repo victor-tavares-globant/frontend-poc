@@ -45,12 +45,14 @@
     ]
   },
   "devDependencies": {
+    "@axe-core/react": "^4.6.0",
     "@craco/craco": "^7.0.0",
     "@craco/types": "^7.0.0",
     "@typescript-eslint/eslint-plugin": "^5.52.0",
     "@typescript-eslint/parser": "^5.52.0",
     "eslint": "^8.34.0",
     "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
     "prettier": "^2.8.4",
