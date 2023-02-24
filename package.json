@@ -25,7 +25,8 @@
     "lint:css": "stylelint 'src/**/*.css'",
     "format:check": "prettier --check .",
     "format:fix": "prettier --write .",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "verify-branch-name": "chmod 755 ./internals/scripts/verify-branch-name.sh && sh ./internals/scripts/verify-branch-name.sh"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": "eslint --max-warnings 0",
