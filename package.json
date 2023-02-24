@@ -53,6 +53,8 @@
   },
   "devDependencies": {
     "@axe-core/react": "^4.6.0",
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.4.4",
     "@craco/craco": "^7.0.0",
     "@craco/types": "^7.0.0",
     "@typescript-eslint/eslint-plugin": "^5.52.0",
