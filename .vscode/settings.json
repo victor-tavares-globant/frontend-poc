@@ -4,5 +4,5 @@
   "prettier.useEditorConfig": true,
   "prettier.singleQuote": true,
   "typescript.preferences.quoteStyle": "single",
-  "html.completion.attributeDefaultValue": "doublequotes",
+  "html.completion.attributeDefaultValue": "doublequotes"
 }
