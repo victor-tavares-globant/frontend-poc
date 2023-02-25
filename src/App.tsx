@@ -2,12 +2,7 @@ import logo from './logo.svg';
 
 import './App.css';
 
-const somefunction = (): void => {
-  console.log('something aldo');
-};
-
 function App(): JSX.Element {
-  somefunction();
   return (
     <div className="App" id="">
       <header className="App-header">
