@@ -4,7 +4,7 @@ import './App.css';
 
 function App(): JSX.Element {
   return (
-    <div className="App" id="">
+    <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
