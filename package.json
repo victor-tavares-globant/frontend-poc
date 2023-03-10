@@ -24,7 +24,7 @@
     "build": "craco build",
     "test": "craco test",
     "eject": "craco eject",
-    "lint": "eslint --ext js,jsx,ts,tsx src --max-warnings 0",
+    "lint": "eslint --ext js,jsx,ts,tsx,mdx src --max-warnings 0",
     "lint:css": "stylelint 'src/**/*.css'",
     "format:check": "prettier --check .",
     "format:fix": "prettier --write .",
@@ -34,9 +34,9 @@
     "build-storybook": "build-storybook -s public"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": "eslint --max-warnings 0",
+    "*.{js,jsx,ts,tsx,mdx}": "eslint --max-warnings 0",
     "*.css": "stylelint",
-    "*.{js,jsx,ts,tsx,md,html,css}": "prettier --write"
+    "*.{js,jsx,ts,tsx,md,mdx,html,css}": "prettier --write"
   },
   "eslintConfig": {
     "extends": [
@@ -78,6 +78,7 @@
     "eslint": "^8.34.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-mdx": "^2.0.5",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-simple-import-sort": "^10.0.0",
