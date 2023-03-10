@@ -22,7 +22,8 @@
       "@layouts": ["app/layouts"],
       "@layouts/*": ["app/layouts/*"],
       "@containers": ["app/containers"],
-      "@containers/*": ["app/containers/*"]
+      "@containers/*": ["app/containers/*"],
+      "@constants/*": ["utils/constants/*"]
     }
   },
   "include": ["src"]
