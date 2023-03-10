@@ -24,17 +24,19 @@
     "build": "craco build",
     "test": "craco test",
     "eject": "craco eject",
-    "lint": "eslint --ext js,jsx,ts,tsx src --max-warnings 0",
+    "lint": "eslint --ext js,jsx,ts,tsx,mdx src --max-warnings 0",
     "lint:css": "stylelint 'src/**/*.css'",
     "format:check": "prettier --check .",
     "format:fix": "prettier --write .",
     "prepare": "husky install",
-    "verify-branch-name": "chmod 755 ./internals/scripts/verify-branch-name.sh && sh ./internals/scripts/verify-branch-name.sh"
+    "verify-branch-name": "chmod 755 ./internals/scripts/verify-branch-name.sh && sh ./internals/scripts/verify-branch-name.sh",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": "eslint --max-warnings 0",
+    "*.{js,jsx,ts,tsx,mdx}": "eslint --max-warnings 0",
     "*.css": "stylelint",
-    "*.{js,jsx,ts,tsx,md,html,css}": "prettier --write"
+    "*.{js,jsx,ts,tsx,md,mdx,html,css}": "prettier --write"
   },
   "eslintConfig": {
     "extends": [
@@ -60,20 +62,35 @@
     "@commitlint/config-conventional": "^17.4.4",
     "@craco/craco": "^7.0.0",
     "@craco/types": "^7.0.0",
+    "@storybook/addon-actions": "^6.5.16",
+    "@storybook/addon-essentials": "^6.5.16",
+    "@storybook/addon-interactions": "^6.5.16",
+    "@storybook/addon-links": "^6.5.16",
+    "@storybook/builder-webpack5": "^6.5.16",
+    "@storybook/manager-webpack5": "^6.5.16",
+    "@storybook/node-logger": "^6.5.16",
+    "@storybook/preset-create-react-app": "^4.1.2",
+    "@storybook/react": "^6.5.16",
+    "@storybook/testing-library": "^0.0.13",
     "@typescript-eslint/eslint-plugin": "^5.52.0",
     "@typescript-eslint/parser": "^5.52.0",
+    "babel-plugin-named-exports-order": "^0.0.2",
     "eslint": "^8.34.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-mdx": "^2.0.5",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-storybook": "^0.6.11",
     "husky": "^8.0.0",
     "lint-staged": "^13.1.2",
     "prettier": "^2.8.4",
+    "prop-types": "^15.8.1",
     "stylelint": "^15.1.0",
     "stylelint-config-css-modules": "^4.2.0",
     "stylelint-config-prettier": "^9.0.5",
-    "stylelint-config-standard": "^30.0.1"
+    "stylelint-config-standard": "^30.0.1",
+    "webpack": "^5.76.0"
   }
 }
