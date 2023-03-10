@@ -6,6 +6,7 @@ import { App } from '@components';
 import reportWebVitals from './reportWebVitals';
 
 import './index.module.css';
+import './styles/general.module.css';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
