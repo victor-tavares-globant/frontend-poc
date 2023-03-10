@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import axe from '@axe-core/react';
+import { App } from '@components';
 
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import './index.css';
+import './index.module.css';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
