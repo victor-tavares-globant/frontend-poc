@@ -66,7 +66,7 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: Test
-        run: yarn jest --passWithNoTests # This SHOULD have to be removed once tests are implemented
+        run: yarn test --coverage
 
   typescript:
     needs: [tests]

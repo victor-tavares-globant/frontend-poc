@@ -57,6 +57,30 @@
       "last 1 safari version"
     ]
   },
+  "jest": {
+    "moduleNameMapper": {
+      "@components/(.*)": "<rootDir>/src/app/components/$1",
+      "@components": "<rootDir>/src/app/components/index.ts",
+      "@layouts/(.*)": "<rootDir>/src/app/layouts/$1",
+      "@layouts": "<rootDir>/src/app/layouts/index.ts",
+      "@containers/(.*)": "<rootDir>/src/app/containers/$1",
+      "@containers": "<rootDir>/src/app/containers/index.ts",
+      "@constants/(.*)": "<rootDir>/src/utils/constants/$1"
+    },
+    "collectCoverageFrom": [
+      "src/app/components/**/*.{js,jsx,ts,tsx}",
+      "!src/**/index.ts",
+      "!<rootDir>/node_modules/"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 75,
+        "functions": 75,
+        "lines": 75,
+        "statements": 75
+      }
+    }
+  },
   "devDependencies": {
     "@axe-core/react": "^4.6.0",
     "@commitlint/cli": "^17.4.4",
