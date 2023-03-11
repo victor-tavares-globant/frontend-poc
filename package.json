@@ -59,7 +59,7 @@
   },
   "jest": {
     "collectCoverageFrom": [
-      "src/**/*.{js,jsx,ts,tsx}",
+      "src/app/components/**/*.{js,jsx,ts,tsx}",
       "!src/**/index.ts",
       "!<rootDir>/node_modules/"
     ],
