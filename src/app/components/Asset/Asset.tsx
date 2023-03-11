@@ -1,9 +1,7 @@
-import React, { NamedExoticComponent, SVGProps } from 'react';
 import classNames from 'classnames';
+import type { ReactComponentLike } from 'prop-types';
 
 import styles from './Asset.module.css';
-
-export type SVGAsset = React.FC<SVGProps<SVGSVGElement>> | NamedExoticComponent;
 
 export interface AssetProps {
   /**
@@ -17,9 +15,9 @@ export interface AssetProps {
   className?: string;
 
   /**
-   * @param {JSX.Element} icon SVG Icon Component to render
+   * @param {ReactComponentLike} icon SVG Icon Component to render
    */
-  icon: SVGAsset;
+  icon: ReactComponentLike;
 
   /**
    * @param {string} [role='img'] Role attribute of SVG element
